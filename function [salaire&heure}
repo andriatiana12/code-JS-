@@ -1,0 +1,36 @@
+
+
+
+
+
+# code-JS-
+TRAINING-Javascript
+const prompt = require("prompt-sync")();
+
+let salaire_h = +prompt("Entrer votre salaire par heure : ");
+let heure = +prompt("Entrer l'heure total que vous avez effectuez : ");
+let salaire_tot = salaire_h * 40;
+if (salaire_h < 0){
+    console.log("Votre salaire par heure ne peut pas être négatif");}
+
+else{
+    if (heure <= 40)
+    {console.log("Entrer une heure correct svp...") : console.log("Votre salaire total est : " +(salaire_tot)+ " Ar");}
+
+    else{
+        salaire_tot = salaire(salaire_h, heure);
+        console.log(salaire_tot);
+    }
+}
+function salaire(salaire, heure){
+    let sup;
+    let heure_sup = heure - 40;
+
+    if (heure_sup >= 1 && heure_sup <= 5)
+        sup = 1.5;
+    else if (heure_sup >= 6 && heure_sup <= 10)
+        sup = 1.75;
+    else
+        sup = 2;
+    return "Votre salaire total est : " +(heure_sup * salaire * sup + (salaire_tot))+ " Ar";
+}
